@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 6814423648079275987}
   - component: {fileID: 7828739029450384856}
   - component: {fileID: 7670598606412539304}
-  - component: {fileID: 8905286231724772010}
   - component: {fileID: 5387775796403987634}
   m_Layer: 0
   m_Name: NDI Camera
@@ -217,24 +216,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &8905286231724772010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161659396390171659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2d98e5bfcdff4847ad69efa861a8e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ndiName: NDI Sender
-  _keepAlpha: 0
-  _captureMethod: 0
-  _sourceCamera: {fileID: 0}
-  _sourceTexture: {fileID: 0}
-  _resources: {fileID: 11400000, guid: 69304b86950074db7ba8caba75214004, type: 2}
 --- !u!114 &5387775796403987634
 MonoBehaviour:
   m_ObjectHideFlags: 0
