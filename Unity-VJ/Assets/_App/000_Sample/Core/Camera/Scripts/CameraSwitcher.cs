@@ -1,12 +1,14 @@
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
+using UniRx;
 
 public class CameraSwitcher : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera[] virtualCameras; // Virtual Cameraを登録
     [SerializeField] private Button[] buttons; // ボタンを登録
-    public int currentCameraIndex = 0; // 現在アクティブなカメラのインデックス
+    public IReadOnlyReactiveProperty<int> CurrentCameraIndex => _currentCameraIndex;
+    private readonly ReactiveProperty<int> _currentCameraIndex = new IntReactiveProperty();
 
     void Start()
     {
@@ -25,6 +27,9 @@ public class CameraSwitcher : MonoBehaviour
 
         // 最初のカメラを有効化
         ActivateCamera(0);
+
+        // Destroy時にDispose()する
+        _currentCameraIndex.AddTo(this);
     }
 
     void Update()
@@ -39,19 +44,19 @@ public class CameraSwitcher : MonoBehaviour
     private void SwitchToNextCamera()
     {
         // 現在のカメラを無効化
-        virtualCameras[currentCameraIndex].Priority = 0;
+        virtualCameras[_currentCameraIndex.Value].Priority = 0;
 
         // 次のカメラのインデックスを計算
-        currentCameraIndex = (currentCameraIndex + 1) % virtualCameras.Length;
+        _currentCameraIndex.Value = (_currentCameraIndex.Value + 1) % virtualCameras.Length;
 
         // 次のカメラを有効化
-        ActivateCamera(currentCameraIndex);
+        ActivateCamera(_currentCameraIndex.Value);
     }
 
     private void SwitchToCamera(int index)
     {
         // 指定されたカメラに切り替え
-        currentCameraIndex = index; // 現在のインデックスを更新
+        _currentCameraIndex.Value = index; // 現在のインデックスを更新
         ActivateCamera(index);
     }
 

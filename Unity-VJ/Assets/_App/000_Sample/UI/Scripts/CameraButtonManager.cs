@@ -1,22 +1,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
 
-public class ButtonGroupManager : MonoBehaviour
+public class CameraButtonManager : MonoBehaviour
 {
     [SerializeField] private List<Button> buttons; // 管理するボタンリスト
+    [SerializeField] private CameraSwitcher _cameraSwitcher;
+
     [SerializeField] private Color activeColor = Color.green; // アクティブなボタンの色
     [SerializeField] private Color inactiveColor = Color.gray; // 非アクティブなボタンの色
 
     void Start()
     {
-        foreach (var button in buttons)
-        {
-            button.onClick.AddListener(() => OnButtonClicked(button));
-        }
+
 
         // 初期状態の設定
         UpdateButtonColors(buttons[0]);
+
+        _cameraSwitcher.CurrentCameraIndex
+            .Subscribe(x => UpdateButtonColors(buttons[x]))
+            .AddTo(this);
     }
 
     private void OnButtonClicked(Button clickedButton)
