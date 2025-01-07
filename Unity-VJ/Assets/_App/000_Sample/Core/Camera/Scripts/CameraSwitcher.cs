@@ -5,7 +5,7 @@ using UniRx;
 
 public class CameraSwitcher : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera[] virtualCameras; // Virtual Cameraを登録
+    [SerializeField] private GameObject[] virtualCameras; // Virtual CameraをGameObjectとして登録
     [SerializeField] private Button[] buttons; // ボタンを登録
     public IReadOnlyReactiveProperty<int> CurrentCameraIndex => _currentCameraIndex;
     private readonly ReactiveProperty<int> _currentCameraIndex = new IntReactiveProperty();
@@ -44,7 +44,7 @@ public class CameraSwitcher : MonoBehaviour
     private void SwitchToNextCamera()
     {
         // 現在のカメラを無効化
-        virtualCameras[_currentCameraIndex.Value].Priority = 0;
+        virtualCameras[_currentCameraIndex.Value].SetActive(false);
 
         // 次のカメラのインデックスを計算
         _currentCameraIndex.Value = (_currentCameraIndex.Value + 1) % virtualCameras.Length;
@@ -55,18 +55,25 @@ public class CameraSwitcher : MonoBehaviour
 
     private void SwitchToCamera(int index)
     {
+        // 現在のカメラを無効化
+        virtualCameras[_currentCameraIndex.Value].SetActive(false);
+
         // 指定されたカメラに切り替え
-        _currentCameraIndex.Value = index; // 現在のインデックスを更新
+        _currentCameraIndex.Value = index;
+
+        // 新しいカメラを有効化
         ActivateCamera(index);
     }
 
     private void ActivateCamera(int index)
     {
-        // 指定したインデックスのカメラを有効化
+        // 全てのカメラを無効化し、指定したカメラだけ有効化
         for (int i = 0; i < virtualCameras.Length; i++)
         {
-            virtualCameras[i].Priority = (i == index) ? 10 : 0;
+            virtualCameras[i].SetActive(i == index);
         }
+
+        Debug.Log($"Camera switched to: {virtualCameras[index].name}");
     }
 
     private void OnDestroy()
