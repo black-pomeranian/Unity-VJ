@@ -16,6 +16,9 @@ public class OSCServer : MonoBehaviour
 
     public IReadOnlyReactiveProperty<float> S1 => _s1;
     private readonly ReactiveProperty<float> _s1 = new FloatReactiveProperty();
+
+    public IReadOnlyReactiveProperty<float> Bpm => _bpm;
+    private readonly ReactiveProperty<float> _bpm = new FloatReactiveProperty();
     public void SetB1(float value)
     {
         _b1.Value = value;
@@ -39,6 +42,13 @@ public class OSCServer : MonoBehaviour
     {
         _s1.Value = value;
         Debug.Log(_s1.Value);
+
+    }
+
+    public void SetBpm(float value)
+    {
+        _bpm.Value = value;
+        Debug.Log(_bpm.Value);
 
     }
 
