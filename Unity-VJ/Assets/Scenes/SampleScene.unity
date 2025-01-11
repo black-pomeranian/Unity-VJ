@@ -1157,6 +1157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 433792890}
+  - component: {fileID: 433792891}
   m_Layer: 0
   m_Name: MaskButtons
   m_TagString: Untagged
@@ -1186,6 +1187,25 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: -269}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &433792891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433792889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c03e8ae6201aac4e8585cb56394a23f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 452700321}
+  - {fileID: 1989103367}
+  - {fileID: 393971437}
+  _parameterManager: {fileID: 876671678}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
+  inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &452700319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,7 +1628,7 @@ MonoBehaviour:
   - {fileID: 757244249}
   - {fileID: 531796833}
   - {fileID: 1685854747}
-  parameterManager: {fileID: 876671678}
+  _parameterManager: {fileID: 876671678}
   activeColor: {r: 1, g: 0.13333334, b: 0, a: 1}
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &636016153
@@ -2452,6 +2472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 847403780}
+  - component: {fileID: 847403781}
   m_Layer: 0
   m_Name: SceneButtons
   m_TagString: Untagged
@@ -2481,6 +2502,25 @@ RectTransform:
   m_AnchoredPosition: {x: 75, y: 233}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &847403781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847403779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4557809108a9e24499d2ae00f573751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 1369100080}
+  - {fileID: 581971633}
+  - {fileID: 636016155}
+  _parameterManager: {fileID: 876671678}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
+  inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!114 &876671678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,

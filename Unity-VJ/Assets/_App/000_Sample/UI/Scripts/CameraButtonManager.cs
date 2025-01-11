@@ -6,7 +6,7 @@ using UniRx;
 public class CameraButtonManager : MonoBehaviour
 {
     [SerializeField] private List<Button> buttons; // 管理するボタンリスト
-    [SerializeField] private ParameterManager parameterManager; // ParameterManager参照
+    [SerializeField] private ParameterManager _parameterManager; // ParameterManager参照
 
     [SerializeField] private Color activeColor = Color.green; // アクティブなボタンの色
     [SerializeField] private Color inactiveColor = Color.gray; // 非アクティブなボタンの色
@@ -20,7 +20,7 @@ public class CameraButtonManager : MonoBehaviour
             buttons[index].onClick.AddListener(() =>
             {
                 // ParameterManagerの_currentCameraIndexを設定
-                parameterManager.SetCameraIndex(index);
+                _parameterManager.SetCameraIndex(index);
 
                 // ボタンの色を更新
                 UpdateButtonColors(buttons[index]);
