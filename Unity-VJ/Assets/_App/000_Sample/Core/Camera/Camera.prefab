@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2661881634096906806}
   m_Layer: 0
   m_Name: Virtual Camera_Self
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 5387775796403987634}
   m_Layer: 0
   m_Name: NDI Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 98379fc7f5569e44ab446b46eda895aa, type: 2}
   m_TargetDisplay: 0
@@ -566,7 +566,6 @@ GameObject:
   - component: {fileID: 8362019333038904557}
   - component: {fileID: 392221991165054193}
   - component: {fileID: 5397650667866603428}
-  - component: {fileID: 8553330311412019511}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -726,24 +725,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8553330311412019511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354613001209064822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd67d4258aeeb1244b155c9398c3f4b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCameras:
-  - {fileID: 1138411906596122161}
-  - {fileID: 584188379206401236}
-  - {fileID: 5970927456731877576}
-  - {fileID: 1184868095621671644}
-  - {fileID: 7023443659509502082}
 --- !u!1 &1744481260852788307
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +870,7 @@ GameObject:
   - component: {fileID: 584188379206401236}
   m_Layer: 0
   m_Name: Virtual Camera_Stop_Noise
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -961,7 +942,7 @@ GameObject:
   - component: {fileID: 1138411906596122161}
   m_Layer: 0
   m_Name: Virtual Camera_Stop
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1147,7 +1128,7 @@ GameObject:
   - component: {fileID: 3463627418232389838}
   m_Layer: 0
   m_Name: Virtual Camera_Rotation
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1235,7 +1216,7 @@ GameObject:
   - component: {fileID: 6968754474656701183}
   m_Layer: 0
   m_Name: Virtual Camera_Rotation_Noise
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,7 +6,7 @@ using UniRx;
 public class StateButtonManager : MonoBehaviour
 {
     [SerializeField] private List<Button> buttons; // 管理するボタンリスト
-    [SerializeField] private StateManager _stateManager;
+    [SerializeField] private ParameterManager _parameterManager;
 
     [SerializeField] private Color activeColor = Color.green; // アクティブなボタンの色
     [SerializeField] private Color inactiveColor = Color.gray; // 非アクティブなボタンの色
@@ -18,7 +18,7 @@ public class StateButtonManager : MonoBehaviour
         // 初期状態の設定
         UpdateButtonColors(buttons[0]);
 
-        _stateManager.CurrentStateIndex
+        _parameterManager.CurrentStateIndex
             .Subscribe(x => UpdateButtonColors(buttons[x]))
             .AddTo(this);
     }
