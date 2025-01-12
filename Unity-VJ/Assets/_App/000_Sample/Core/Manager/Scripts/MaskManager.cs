@@ -52,12 +52,4 @@ public class MaskManager : MonoBehaviour
                 break;
         }
     }
-
-    private void OnDestroy()
-    {
-        if (defaultSkyBox != null)
-        {
-            Destroy(defaultSkyBox);
-        }
-    }
 }
