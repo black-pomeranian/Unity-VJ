@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StateManager : MonoBehaviour
 {
     [SerializeField] private ParameterManager parameterManager;
+    [SerializeField] private ObjectsController objectsController;
 
     void Start()
     {
@@ -26,20 +27,19 @@ public class StateManager : MonoBehaviour
         switch (newIndex)
         {
             case 0:
-                Debug.Log("State Index is 0: Perform Action A");
-                // Action A の処理
+                objectsController.SetState1();
                 break;
             case 1:
-                Debug.Log("State Index is 1: Perform Action B");
-                // Action B の処理
+                objectsController.SetState2();
+
                 break;
             case 2:
-                Debug.Log("State Index is 2: Perform Action C");
-                // Action C の処理
+                objectsController.SetState3();
+
                 break;
             default:
-                Debug.Log($"Mask Index is {newIndex}: Default Action");
-                // デフォルトの処理
+                objectsController.SetState4();
+
                 break;
         }
     }
