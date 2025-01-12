@@ -7,22 +7,10 @@ using UnityEngine.UI;
 public class MaskManager : MonoBehaviour
 {
     [SerializeField] private ParameterManager parameterManager;
-    [SerializeField] Material greenSkyBox;
-    [SerializeField] Material greenMaterial;
-    [SerializeField] GameObject maskedObject1;
-
-    private Material defaultSkyBox;
-
-    private MeshRenderer defaultRenderer1;
-    private Material defaultMaterial1;
+    [SerializeField] private MaskController maskController;
 
     void Start()
     {
-
-        defaultSkyBox = RenderSettings.skybox;
-
-        defaultRenderer1 = maskedObject1.GetComponent<MeshRenderer>();
-        defaultMaterial1 = defaultRenderer1.material;
 
         // CurrentMaskIndex‚Ì’l‚ğŠÄ‹‚µA•Ï‰»‚ÉOnIndexChanged‚ğŒÄ‚Ño‚·
         parameterManager.CurrentMaskIndex
@@ -42,18 +30,14 @@ public class MaskManager : MonoBehaviour
         switch (newIndex)
         {
             case 0:
-                RenderSettings.skybox = defaultSkyBox;
-                defaultRenderer1.material = defaultMaterial1; 
+                maskController.SetMask1();
                 break;
             case 1:
-                RenderSettings.skybox = defaultSkyBox;
-                defaultRenderer1.material = greenMaterial;
+                maskController.SetMask2();
 
                 break;
             case 2:
-                RenderSettings.skybox = greenSkyBox;
-                defaultRenderer1.material = defaultMaterial1;
-
+                maskController.SetMask3();
 
                 break;
             default:
@@ -63,19 +47,4 @@ public class MaskManager : MonoBehaviour
         }
     }
 
-    /*
-    private void OnDestroy()
-    {
-        DestroyMaterial(defaultSkyBox);
-        DestroyMaterial(greenMaterial);
-    }
-
-    private void DestroyMaterial(Material material)
-    {
-        if (material != null)
-        {
-            Destroy(material);
-        }
-    }
-    */
 }

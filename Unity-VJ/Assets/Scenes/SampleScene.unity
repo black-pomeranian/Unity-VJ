@@ -5875,6 +5875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119792096}
   - component: {fileID: 2119792097}
+  - component: {fileID: 2119792098}
   m_Layer: 0
   m_Name: Object
   m_TagString: Untagged
@@ -5920,6 +5921,21 @@ MonoBehaviour:
   Cube: {fileID: 52741841}
   Cylinder: {fileID: 842500608}
   Particle: {fileID: 751140658}
+--- !u!114 &2119792098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119792095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ba6fc2d9ee5f84fb40ced2830ea31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenSkyBox: {fileID: 2100000, guid: 5c3b9b007e7d87c4da3a7936eff04dee, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 48ed1801cf1219e42a4b022edd2cf78c, type: 2}
+  maskedObject1: {fileID: 372930240}
 --- !u!1 &2121750791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5997492136808740725, guid: e1a91a628e943ca468019ac253889ad2,
@@ -6095,6 +6111,11 @@ PrefabInstance:
       propertyPath: maskedObject1
       value: 
       objectReference: {fileID: 372930240}
+    - target: {fileID: 884606527810249372, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: maskController
+      value: 
+      objectReference: {fileID: 2119792098}
     - target: {fileID: 3221355323214384581, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
         type: 3}
       propertyPath: m_Name
