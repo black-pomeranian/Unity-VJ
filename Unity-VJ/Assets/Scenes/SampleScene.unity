@@ -5141,6 +5141,11 @@ PrefabInstance:
       propertyPath: greenMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 48ed1801cf1219e42a4b022edd2cf78c, type: 2}
+    - target: {fileID: 884606527810249372, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: maskedObject1
+      value: 
+      objectReference: {fileID: 372930240}
     - target: {fileID: 3221355323214384581, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
         type: 3}
       propertyPath: m_Name
