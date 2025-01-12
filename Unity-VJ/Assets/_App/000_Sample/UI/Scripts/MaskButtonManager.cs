@@ -8,23 +8,32 @@ public class MaskButtonManager : MonoBehaviour
     [SerializeField] private List<Button> buttons; // 管理するボタンリスト
     [SerializeField] private ParameterManager _parameterManager;
 
+    private int maskMax;
+
     [SerializeField] private Color activeColor = Color.green; // アクティブなボタンの色
     [SerializeField] private Color inactiveColor = Color.gray; // 非アクティブなボタンの色
 
     void Start()
     {
+        maskMax = _parameterManager.maskMax;
+
+
         // ボタンごとにリスナーを設定
         for (int i = 0; i < buttons.Count; i++)
         {
-            int index = i; // キャプチャ問題を回避するためにローカル変数を使用
-            buttons[index].onClick.AddListener(() =>
+            if (i < maskMax)
             {
-                // ParameterManagerの_currentCameraIndexを設定
-                _parameterManager.SetMaskIndex(index);
+                int index = i; // キャプチャ問題を回避するためにローカル変数を使用
+                buttons[index].onClick.AddListener(() =>
+                {
+                    // ParameterManagerの_currentCameraIndexを設定
+                    _parameterManager.SetMaskIndex(index);
 
-                // ボタンの色を更新
-                UpdateButtonColors(buttons[index]);
-            });
+                    // ボタンの色を更新
+                    UpdateButtonColors(buttons[index]);
+                });
+            }
+
         }
 
         // 初期状態の設定（インデックス0をアクティブにする）

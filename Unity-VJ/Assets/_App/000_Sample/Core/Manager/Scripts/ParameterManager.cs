@@ -23,20 +23,16 @@ public class ParameterManager : MonoBehaviour
     [SerializeField] private GameObject SceneButtons;
     [SerializeField] private GameObject CameraButtons;
 
-    private int _stateMax;
-    private int _maskMax;
-    private int _sceneMax;
-    private int _cameraMax;
+    //自分で設定
+    public int stateMax;
+    public int maskMax;
+    public int sceneMax;
+    public int cameraMax;
 
     private const int MinIndex = 0;
 
     void Start()
     {
-        // 子オブジェクトの数を取得して最大値を設定
-        _stateMax = StateButtons.transform.childCount - 1;
-        _maskMax = MaskButtons.transform.childCount - 1;
-        _sceneMax = SceneButtons.transform.childCount - 1;
-        _cameraMax = CameraButtons.transform.childCount - 1;
 
         // 初期値を設定
         SetStateIndex(0);
@@ -46,27 +42,27 @@ public class ParameterManager : MonoBehaviour
     }
 
     // Set value functions with clamping
-    public void SetStateIndex(int value) => _currentStateIndex.Value = Mathf.Clamp(value, MinIndex, _stateMax);
-    public void SetMaskIndex(int value) => _currentMaskIndex.Value = Mathf.Clamp(value, MinIndex, _maskMax);
-    public void SetSceneIndex(int value) => _currentSceneIndex.Value = Mathf.Clamp(value, MinIndex, _sceneMax);
-    public void SetCameraIndex(int value) => _currentCameraIndex.Value = Mathf.Clamp(value, MinIndex, _cameraMax);
+    public void SetStateIndex(int value) => _currentStateIndex.Value = Mathf.Clamp(value, MinIndex, stateMax);
+    public void SetMaskIndex(int value) => _currentMaskIndex.Value = Mathf.Clamp(value, MinIndex, maskMax);
+    public void SetSceneIndex(int value) => _currentSceneIndex.Value = Mathf.Clamp(value, MinIndex, sceneMax);
+    public void SetCameraIndex(int value) => _currentCameraIndex.Value = Mathf.Clamp(value, MinIndex, cameraMax);
 
     // Increment functions with looping
-    public void IncrementStateIndex() => _currentStateIndex.Value = LoopIndex(_currentStateIndex.Value + 1, _stateMax);
-    public void IncrementMaskIndex() => _currentMaskIndex.Value = LoopIndex(_currentMaskIndex.Value + 1, _maskMax);
-    public void IncrementSceneIndex() => _currentSceneIndex.Value = LoopIndex(_currentSceneIndex.Value + 1, _sceneMax);
-    public void IncrementCameraIndex() => _currentCameraIndex.Value = LoopIndex(_currentCameraIndex.Value + 1, _cameraMax);
+    public void IncrementStateIndex() => _currentStateIndex.Value = LoopIndex(_currentStateIndex.Value + 1, stateMax);
+    public void IncrementMaskIndex() => _currentMaskIndex.Value = LoopIndex(_currentMaskIndex.Value + 1, maskMax);
+    public void IncrementSceneIndex() => _currentSceneIndex.Value = LoopIndex(_currentSceneIndex.Value + 1, sceneMax);
+    public void IncrementCameraIndex() => _currentCameraIndex.Value = LoopIndex(_currentCameraIndex.Value + 1, cameraMax);
 
     // Decrement functions with looping
-    public void DecrementStateIndex() => _currentStateIndex.Value = LoopIndex(_currentStateIndex.Value - 1, _stateMax);
-    public void DecrementMaskIndex() => _currentMaskIndex.Value = LoopIndex(_currentMaskIndex.Value - 1, _maskMax);
-    public void DecrementSceneIndex() => _currentSceneIndex.Value = LoopIndex(_currentSceneIndex.Value - 1, _sceneMax);
-    public void DecrementCameraIndex() => _currentCameraIndex.Value = LoopIndex(_currentCameraIndex.Value - 1, _cameraMax);
+    public void DecrementStateIndex() => _currentStateIndex.Value = LoopIndex(_currentStateIndex.Value - 1, stateMax);
+    public void DecrementMaskIndex() => _currentMaskIndex.Value = LoopIndex(_currentMaskIndex.Value - 1, maskMax);
+    public void DecrementSceneIndex() => _currentSceneIndex.Value = LoopIndex(_currentSceneIndex.Value - 1, sceneMax);
+    public void DecrementCameraIndex() => _currentCameraIndex.Value = LoopIndex(_currentCameraIndex.Value - 1, cameraMax);
 
     // Helper function to loop index
     private int LoopIndex(int value, int max)
     {
-        if (value > max)
+        if (value >= max)
             return MinIndex; // 最大値を超えたら最小値にループ
         if (value < MinIndex)
             return max; // 最小値を下回ったら最大値にループ

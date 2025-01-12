@@ -6123,6 +6123,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
         type: 3}
+      propertyPath: maskMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: sceneMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: stateMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: cameraMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
       propertyPath: MaskButtons
       value: 
       objectReference: {fileID: 433792889}
@@ -6246,16 +6266,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4731868636155713958, guid: c410c99cc7fe146419dc531778ce9af7,
         type: 3}
-      propertyPath: activeColor.g
-      value: 0.13333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731868636155713958, guid: c410c99cc7fe146419dc531778ce9af7,
-        type: 3}
-      propertyPath: activeColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731868636155713958, guid: c410c99cc7fe146419dc531778ce9af7,
-        type: 3}
       propertyPath: _parameterManager
       value: 
       objectReference: {fileID: 876671678}
@@ -6313,16 +6323,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8688414203809539644, guid: c410c99cc7fe146419dc531778ce9af7,
-        type: 3}
-      propertyPath: activeColor.g
-      value: 0.13333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8688414203809539644, guid: c410c99cc7fe146419dc531778ce9af7,
-        type: 3}
-      propertyPath: activeColor.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8688414203809539644, guid: c410c99cc7fe146419dc531778ce9af7,
         type: 3}
