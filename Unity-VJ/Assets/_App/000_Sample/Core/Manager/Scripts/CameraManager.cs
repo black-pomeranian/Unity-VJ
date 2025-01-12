@@ -23,7 +23,6 @@ public class CameraManager : MonoBehaviour
 
     private void OnIndexChanged(int newIndex)
     {
-        Debug.Log(newIndex);
 
         ActivateCamera(newIndex);
         // newIndex‚Ì’l‚É‰‚¶‚Äˆ—‚ğ•ªŠò

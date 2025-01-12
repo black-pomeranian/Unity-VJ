@@ -879,7 +879,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0bf67eb656c76fb478c9cdc71f4f7545, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4987,6 +4987,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 884606527810249372, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: greenSkyBox
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c3b9b007e7d87c4da3a7936eff04dee, type: 2}
+    - target: {fileID: 884606527810249372, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: defaultSkyBox
+      value: 
+      objectReference: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 884606527810249372, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: greenMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 48ed1801cf1219e42a4b022edd2cf78c, type: 2}
     - target: {fileID: 3221355323214384581, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
         type: 3}
       propertyPath: m_Name
