@@ -63,6 +63,7 @@ public class MaskManager : MonoBehaviour
         }
     }
 
+    /*
     private void OnDestroy()
     {
         DestroyMaterial(defaultSkyBox);
@@ -76,4 +77,5 @@ public class MaskManager : MonoBehaviour
             Destroy(material);
         }
     }
+    */
 }
