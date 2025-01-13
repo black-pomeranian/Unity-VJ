@@ -6175,6 +6175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 838424041}
+  - component: {fileID: 838424042}
   m_Layer: 0
   m_Name: Information
   m_TagString: Untagged
@@ -6202,6 +6203,29 @@ RectTransform:
   m_AnchoredPosition: {x: -26, y: 32}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &838424042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838424040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e52f81f0f914cf41b2c6e4cfb74de36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscServer: {fileID: 2121750793}
+  b1Text: {fileID: 812530273}
+  b2Text: {fileID: 872761845}
+  b3Text: {fileID: 2023788576}
+  s1Text: {fileID: 918336181}
+  fpsText: {fileID: 0}
+  bpmText: {fileID: 1603797522}
+  b1Scrollbar: {fileID: 459587381}
+  b2Scrollbar: {fileID: 1293446240}
+  b3Scrollbar: {fileID: 2128700254}
+  s1Scrollbar: {fileID: 1817141439}
 --- !u!4 &840917695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7240929715156142344, guid: d7d58d31e77ba1045b452d4835fc7877,
@@ -7914,7 +7938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1798489463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9426,6 +9450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7345268033737634492, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_UVRect.width
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7600586479851596927, guid: c410c99cc7fe146419dc531778ce9af7,
         type: 3}

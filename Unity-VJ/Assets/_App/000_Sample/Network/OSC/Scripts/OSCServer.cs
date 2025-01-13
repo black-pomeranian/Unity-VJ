@@ -22,34 +22,24 @@ public class OSCServer : MonoBehaviour
     public void SetB1(float value)
     {
         _b1.Value = value;
-        Debug.Log(_b1.Value);
-
     }
     public void SetB2(float value)
     {
         _b2.Value = value;
-        Debug.Log(_b2.Value);
-
     }
     public void SetB3(float value)
     {
         _b3.Value = value;
-        Debug.Log(_b3.Value);
-
     }
 
     public void SetS1(float value)
     {
         _s1.Value = value;
-        Debug.Log(_s1.Value);
-
     }
 
     public void SetBpm(float value)
     {
         _bpm.Value = value;
-        Debug.Log(_bpm.Value);
-
     }
 
 }
