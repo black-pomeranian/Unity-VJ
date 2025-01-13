@@ -6,28 +6,28 @@ using UnityEngine;
 
 public class ParameterManager : MonoBehaviour
 {
+    public IReadOnlyReactiveProperty<int> CurrentSceneIndex => _currentSceneIndex;
+    private readonly ReactiveProperty<int> _currentSceneIndex = new IntReactiveProperty();
+
     public IReadOnlyReactiveProperty<int> CurrentStateIndex => _currentStateIndex;
     private readonly ReactiveProperty<int> _currentStateIndex = new IntReactiveProperty();
 
     public IReadOnlyReactiveProperty<int> CurrentMaskIndex => _currentMaskIndex;
     private readonly ReactiveProperty<int> _currentMaskIndex = new IntReactiveProperty();
 
-    public IReadOnlyReactiveProperty<int> CurrentSceneIndex => _currentSceneIndex;
-    private readonly ReactiveProperty<int> _currentSceneIndex = new IntReactiveProperty();
-
     public IReadOnlyReactiveProperty<int> CurrentCameraIndex => _currentCameraIndex;
     private readonly ReactiveProperty<int> _currentCameraIndex = new IntReactiveProperty();
 
+    [SerializeField] private GameObject CameraButtons;
     [SerializeField] private GameObject StateButtons;
     [SerializeField] private GameObject MaskButtons;
     [SerializeField] private GameObject SceneButtons;
-    [SerializeField] private GameObject CameraButtons;
 
     //é©ï™Ç≈ê›íË
+    public int cameraMax;
     public int stateMax;
     public int maskMax;
     public int sceneMax;
-    public int cameraMax;
 
     private const int MinIndex = 0;
 

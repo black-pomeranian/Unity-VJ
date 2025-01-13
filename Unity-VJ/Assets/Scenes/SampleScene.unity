@@ -494,12 +494,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1851324382146763301}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &603732795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5562065574643510599, guid: c410c99cc7fe146419dc531778ce9af7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1851324382146763301}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &662859519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7149357522429775132, guid: dfcb899dc432be3479024d08797ed8ca,
@@ -5764,6 +5758,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3985351225701251764}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1509647096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3532999773460990888, guid: c410c99cc7fe146419dc531778ce9af7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1851324382146763301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792117599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6160,7 +6160,7 @@ PrefabInstance:
         type: 3}
       propertyPath: CameraButtons
       value: 
-      objectReference: {fileID: 603732795}
+      objectReference: {fileID: 1509647096}
     - target: {fileID: 6879660831201405402, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6254,11 +6254,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 808935329978548050, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_text
+      value: 'Camera
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210265490127811352, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_text
+      value: 'Render
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209659693649781118, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: _parameterManager
+      value: 
+      objectReference: {fileID: 876671678}
     - target: {fileID: 2734370303906300999, guid: c410c99cc7fe146419dc531778ce9af7,
         type: 3}
       propertyPath: _parameterManager
       value: 
       objectReference: {fileID: 876671678}
+    - target: {fileID: 3532999773460990888, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraButtons
+      objectReference: {fileID: 0}
     - target: {fileID: 4315779561981115108, guid: c410c99cc7fe146419dc531778ce9af7,
         type: 3}
       propertyPath: m_Name
@@ -6274,6 +6298,21 @@ PrefabInstance:
       propertyPath: _parameterManager
       value: 
       objectReference: {fileID: 876671678}
+    - target: {fileID: 5562065574643510599, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_Name
+      value: RenderButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988131967727966031, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_Name
+      value: RenderUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273952333618014465, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -294
+      objectReference: {fileID: 0}
     - target: {fileID: 6389076023322740296, guid: c410c99cc7fe146419dc531778ce9af7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6323,6 +6362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268182489877626668, guid: c410c99cc7fe146419dc531778ce9af7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -233
       objectReference: {fileID: 0}
     - target: {fileID: 8688414203809539644, guid: c410c99cc7fe146419dc531778ce9af7,
         type: 3}
