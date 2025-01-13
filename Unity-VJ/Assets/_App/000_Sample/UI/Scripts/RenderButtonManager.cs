@@ -1,32 +1,34 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MaskButtonManager : MonoBehaviour
+
+public class RenderButtonManager : MonoBehaviour
 {
     [SerializeField] private List<Button> buttons; // 管理するボタンリスト
     [SerializeField] private ParameterManager _parameterManager;
 
-    private int maskMax;
+    private int renderMax;
 
     [SerializeField] private Color activeColor = Color.green; // アクティブなボタンの色
     [SerializeField] private Color inactiveColor = Color.gray; // 非アクティブなボタンの色
 
     void Start()
     {
-        maskMax = _parameterManager.maskMax;
+        renderMax = _parameterManager.renderMax;
 
 
         // ボタンごとにリスナーを設定
         for (int i = 0; i < buttons.Count; i++)
         {
-            if (i < maskMax)
+            if (i < renderMax)
             {
                 int index = i; // キャプチャ問題を回避するためにローカル変数を使用
                 buttons[index].onClick.AddListener(() =>
                 {
                     // ParameterManagerの_currentCameraIndexを設定
-                    _parameterManager.SetMaskIndex(index);
+                    _parameterManager.SetRenderIndex(index);
 
                     // ボタンの色を更新
                     UpdateButtonColors(buttons[index]);

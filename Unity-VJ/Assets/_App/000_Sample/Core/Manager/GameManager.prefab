@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6879660831201405402}
+  - component: {fileID: 7665296220648241921}
   - component: {fileID: 8844289408477376300}
   - component: {fileID: 884606527810249372}
-  - component: {fileID: 7665296220648241921}
+  - component: {fileID: 8791498689339291009}
   - component: {fileID: 7177323380321299643}
   - component: {fileID: 3779768343953388340}
   m_Layer: 0
@@ -36,32 +37,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8844289408477376300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3221355323214384581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc61c0f5f2cb5eb4eb9f815453894881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parameterManager: {fileID: 3779768343953388340}
---- !u!114 &884606527810249372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3221355323214384581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b24e59ac6cee624b9ed265e9d855a27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parameterManager: {fileID: 3779768343953388340}
 --- !u!114 &7665296220648241921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +50,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterManager: {fileID: 3779768343953388340}
+--- !u!114 &8844289408477376300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221355323214384581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc61c0f5f2cb5eb4eb9f815453894881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterManager: {fileID: 3779768343953388340}
+  objectsController: {fileID: 0}
+--- !u!114 &884606527810249372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221355323214384581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b24e59ac6cee624b9ed265e9d855a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterManager: {fileID: 3779768343953388340}
+  maskController: {fileID: 0}
+--- !u!114 &8791498689339291009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221355323214384581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868443814db4e254884899b42812579a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterManager: {fileID: 3779768343953388340}
+  renderController: {fileID: 0}
 --- !u!114 &7177323380321299643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +123,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5361d4c872b40fa4cb06a7c1490f038c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneButtons: {fileID: 0}
   StateButtons: {fileID: 0}
   MaskButtons: {fileID: 0}
-  SceneButtons: {fileID: 0}
+  RenderButtons: {fileID: 0}
   CameraButtons: {fileID: 0}
+  cameraMax: 5
+  stateMax: 4
+  maskMax: 3
+  renderMax: 3
+  sceneMax: 4
