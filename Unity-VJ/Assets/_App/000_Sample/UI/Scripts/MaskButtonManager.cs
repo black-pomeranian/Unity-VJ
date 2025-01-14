@@ -25,6 +25,7 @@ public class MaskButtonManager : MonoBehaviour
                 int index = i; // キャプチャ問題を回避するためにローカル変数を使用
                 buttons[index].onClick.AddListener(() =>
                 {
+                    Debug.Log(index);
                     // ParameterManagerの_currentCameraIndexを設定
                     _parameterManager.SetMaskIndex(index);
 

@@ -67,7 +67,6 @@ public class InfomationController : MonoBehaviour
             .Subscribe(value =>
             {
                 bpmText.text = value.ToString();
-                Debug.Log(value);
             })
             .AddTo(this);
     }
