@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StateManager : MonoBehaviour
 {
     [SerializeField] private ParameterManager parameterManager;
-    [SerializeField] private ObjectsController objectsController;
+    [SerializeField] private StateController stateController;
 
     void Start()
     {
@@ -27,18 +27,18 @@ public class StateManager : MonoBehaviour
         switch (newIndex)
         {
             case 0:
-                objectsController.SetState1();
+                stateController.SetState1();
                 break;
             case 1:
-                objectsController.SetState2();
+                stateController.SetState2();
 
                 break;
             case 2:
-                objectsController.SetState3();
+                stateController.SetState3();
 
                 break;
             default:
-                objectsController.SetState4();
+                stateController.SetState4();
 
                 break;
         }
