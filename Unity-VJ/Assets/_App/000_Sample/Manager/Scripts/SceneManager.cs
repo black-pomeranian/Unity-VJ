@@ -20,6 +20,7 @@ public class SceneManager : MonoBehaviour
             .AddTo(this); // GameObject‚ª”jŠü‚³‚ê‚½Û‚É©“®‚Åw“Ç‰ğœ
     }
 
+
     private void OnIndexChanged(int newIndex)
     {
         // newIndex‚Ì’l‚É‰‚¶‚Äˆ—‚ğ•ªŠò
