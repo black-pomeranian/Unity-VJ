@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ParameterManager : MonoBehaviour
 {
@@ -38,11 +39,12 @@ public class ParameterManager : MonoBehaviour
 
     void Start()
     {
+        _currentSceneIndex.Value = PlayerPrefs.GetInt("TargetScene");
+        Debug.Log($"現在のシーンのインデックス: {_currentSceneIndex.Value}");
 
-        // 初期値を設定
-        SetStateIndex(0);
+        SetSceneIndex(_currentSceneIndex.Value);
         SetMaskIndex(0);
-        SetSceneIndex(0);
+        SetStateIndex(0);
         SetCameraIndex(0);
         SetRenderIndex(0);
     }

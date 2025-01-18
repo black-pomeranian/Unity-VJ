@@ -36,7 +36,7 @@ public class SceneButtonManager : MonoBehaviour
         }
 
         // 初期状態の設定（インデックス0をアクティブにする）
-        UpdateButtonColors(buttons[0]);
+        UpdateButtonColors(buttons[PlayerPrefs.GetInt("TargetScene")]);
     }
 
     private void UpdateButtonColors(Button activeButton)
