@@ -6453,6 +6453,7 @@ MonoBehaviour:
   - {fileID: 3825884571560255891}
   - {fileID: 4937137265388661321}
   - {fileID: 2055812630276791003}
+  _parameterManager: {fileID: 2078654153070986958}
   activeColor: {r: 1, g: 0.49019608, b: 0, a: 1}
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &2142601200804764036
@@ -10603,6 +10604,11 @@ PrefabInstance:
       propertyPath: sceneLoader
       value: 
       objectReference: {fileID: 2920123754764256527}
+    - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: effectMax
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
         type: 3}
       propertyPath: MaskButtons

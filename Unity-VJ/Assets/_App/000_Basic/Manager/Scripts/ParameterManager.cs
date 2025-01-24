@@ -22,18 +22,17 @@ public class ParameterManager : MonoBehaviour
     public IReadOnlyReactiveProperty<int> CurrentCameraIndex => _currentCameraIndex;
     private readonly ReactiveProperty<int> _currentCameraIndex = new IntReactiveProperty();
 
-    [SerializeField] private GameObject SceneButtons;
-    [SerializeField] private GameObject StateButtons;
-    [SerializeField] private GameObject MaskButtons;
-    [SerializeField] private GameObject RenderButtons;
-    [SerializeField] private GameObject CameraButtons;
+    public IReadOnlyReactiveDictionary<int, bool> CurrentButtonStates => _currentButtonStates;
+    private readonly ReactiveDictionary<int, bool> _currentButtonStates = new ReactiveDictionary<int, bool>();
 
-    //自分で設定
+
+    // 自分で設定
     public int cameraMax;
     public int stateMax;
     public int maskMax;
     public int renderMax;
     public int sceneMax;
+    public int effectMax;
 
     private const int MinIndex = 0;
 
@@ -47,6 +46,22 @@ public class ParameterManager : MonoBehaviour
         SetStateIndex(0);
         SetCameraIndex(0);
         SetRenderIndex(0);
+
+        // 各ボタンの初期状態を false に設定
+        for (int i = 0; i < sceneMax; i++)
+        {
+            _currentButtonStates[i] = false;
+        }
+    }
+
+
+    // ボタンの状態をトグル
+    public void ToggleEffectState(int index)
+    {
+        if (_currentButtonStates.ContainsKey(index))
+        {
+            _currentButtonStates[index] = !_currentButtonStates[index];
+        }
     }
 
     // Set value functions with clamping
