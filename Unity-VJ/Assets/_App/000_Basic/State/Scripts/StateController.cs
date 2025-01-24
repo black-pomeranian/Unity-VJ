@@ -11,40 +11,49 @@ public class StateController : MonoBehaviour
 
     public void SetState1()
     {
-        ActivateObjects(state1Objects);
         DeactivateObjects(state2Objects);
         DeactivateObjects(state3Objects);
         DeactivateObjects(state4Objects);
+
+        ActivateObjects(state1Objects);
+
     }
 
     public void SetState2()
     {
-        ActivateObjects(state2Objects);
         DeactivateObjects(state1Objects);
         DeactivateObjects(state3Objects);
         DeactivateObjects(state4Objects);
+
+        ActivateObjects(state2Objects);
+
     }
 
     public void SetState3()
     {
-        ActivateObjects(state3Objects);
         DeactivateObjects(state1Objects);
         DeactivateObjects(state2Objects);
         DeactivateObjects(state4Objects);
+
+        ActivateObjects(state3Objects);
+
     }
 
     public void SetState4()
     {
-        ActivateObjects(state4Objects);
         DeactivateObjects(state1Objects);
         DeactivateObjects(state2Objects);
         DeactivateObjects(state3Objects);
+
+        ActivateObjects(state4Objects);
+
     }
 
     private void ActivateObjects(List<GameObject> objects)
     {
         foreach (var obj in objects)
         {
+
             if (obj != null)
             {
                 obj.SetActive(true);
