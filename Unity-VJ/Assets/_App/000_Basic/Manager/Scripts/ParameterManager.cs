@@ -22,8 +22,8 @@ public class ParameterManager : MonoBehaviour
     public IReadOnlyReactiveProperty<int> CurrentCameraIndex => _currentCameraIndex;
     private readonly ReactiveProperty<int> _currentCameraIndex = new IntReactiveProperty();
 
-    public IReadOnlyReactiveDictionary<int, bool> CurrentButtonStates => _currentButtonStates;
-    private readonly ReactiveDictionary<int, bool> _currentButtonStates = new ReactiveDictionary<int, bool>();
+    public IReadOnlyReactiveDictionary<int, bool> CurrentEffectStates => _currentEffectStates;
+    private readonly ReactiveDictionary<int, bool> _currentEffectStates = new ReactiveDictionary<int, bool>();
 
 
     // 自分で設定
@@ -50,7 +50,7 @@ public class ParameterManager : MonoBehaviour
         // 各ボタンの初期状態を false に設定
         for (int i = 0; i < sceneMax; i++)
         {
-            _currentButtonStates[i] = false;
+            _currentEffectStates[i] = false;
         }
     }
 
@@ -58,9 +58,9 @@ public class ParameterManager : MonoBehaviour
     // ボタンの状態をトグル
     public void ToggleEffectState(int index)
     {
-        if (_currentButtonStates.ContainsKey(index))
+        if (_currentEffectStates.ContainsKey(index))
         {
-            _currentButtonStates[index] = !_currentButtonStates[index];
+            _currentEffectStates[index] = !_currentEffectStates[index];
         }
     }
 
