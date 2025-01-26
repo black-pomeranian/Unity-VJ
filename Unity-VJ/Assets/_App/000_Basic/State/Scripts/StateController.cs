@@ -8,56 +8,47 @@ public class StateController : MonoBehaviour
     [SerializeField] private List<GameObject> state2Objects;
     [SerializeField] private List<GameObject> state3Objects;
     [SerializeField] private List<GameObject> state4Objects;
+    [SerializeField] private List<GameObject> state5Objects;
+    [SerializeField] private List<GameObject> state6Objects;
+    [SerializeField] private List<GameObject> state7Objects;
+    [SerializeField] private List<GameObject> state8Objects;
+    [SerializeField] private List<GameObject> state9Objects;
+    [SerializeField] private List<GameObject> state10Objects;
 
-    public void SetState1()
+    private List<List<GameObject>> stateObjects;
+    private void Start()
     {
-        DeactivateObjects(state2Objects);
-        DeactivateObjects(state3Objects);
-        DeactivateObjects(state4Objects);
-
-        ActivateObjects(state1Objects);
-
+        // 実行時にリストを生成
+        stateObjects = new List<List<GameObject>>
+        {
+            state1Objects, state2Objects, state3Objects, state4Objects, state5Objects,
+            state6Objects, state7Objects, state8Objects, state9Objects, state10Objects
+        };
     }
 
-    public void SetState2()
+    public void SetState(int index)
     {
-        DeactivateObjects(state1Objects);
-        DeactivateObjects(state3Objects);
-        DeactivateObjects(state4Objects);
+        if (index < 0 || index >= stateObjects.Count)
+        {
+            Debug.LogWarning("Invalid state index: " + index);
+            return;
+        }
 
-        ActivateObjects(state2Objects);
+        // すべてのオブジェクトを非アクティブ化
+        foreach (var objects in stateObjects)
+        {
+            DeactivateObjects(objects);
+        }
 
-    }
-
-    public void SetState3()
-    {
-        DeactivateObjects(state1Objects);
-        DeactivateObjects(state2Objects);
-        DeactivateObjects(state4Objects);
-
-        ActivateObjects(state3Objects);
-
-    }
-
-    public void SetState4()
-    {
-        DeactivateObjects(state1Objects);
-        DeactivateObjects(state2Objects);
-        DeactivateObjects(state3Objects);
-
-        ActivateObjects(state4Objects);
-
+        // 指定のステートのみアクティブ化
+        ActivateObjects(stateObjects[index]);
     }
 
     private void ActivateObjects(List<GameObject> objects)
     {
         foreach (var obj in objects)
         {
-
-            if (obj != null)
-            {
-                obj.SetActive(true);
-            }
+            if (obj != null) obj.SetActive(true);
         }
     }
 
@@ -65,10 +56,7 @@ public class StateController : MonoBehaviour
     {
         foreach (var obj in objects)
         {
-            if (obj != null)
-            {
-                obj.SetActive(false);
-            }
+            if (obj != null) obj.SetActive(false);
         }
     }
 }

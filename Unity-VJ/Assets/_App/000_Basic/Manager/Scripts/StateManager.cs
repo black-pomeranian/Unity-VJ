@@ -27,18 +27,39 @@ public class StateManager : MonoBehaviour
         switch (newIndex)
         {
             case 0:
-                stateController.SetState1();
+                stateController.SetState(newIndex);
                 break;
             case 1:
-                stateController.SetState2();
-
+                stateController.SetState(newIndex);
                 break;
             case 2:
-                stateController.SetState3();
-
+                stateController.SetState(newIndex);
+                break; 
+            case 3:
+                stateController.SetState(newIndex);
                 break;
+            case 4:
+                stateController.SetState(newIndex);
+                break;
+            case 5:
+                stateController.SetState(newIndex);
+                break;
+            case 6:
+                stateController.SetState(newIndex);
+                break;
+            case 7:
+                stateController.SetState(newIndex);
+                break;
+            case 8:
+                stateController.SetState(newIndex);
+                break;
+            case 9:
+                stateController.SetState(newIndex);
+                break;
+
+
             default:
-                stateController.SetState4();
+                stateController.SetState(newIndex);
 
                 break;
         }
