@@ -24,6 +24,7 @@ public class CameraManager : MonoBehaviour
     {
 
         ActivateCamera(newIndex);
+        Debug.Log(newIndex);
         // newIndex‚Ì’l‚É‰‚¶‚Äˆ—‚ğ•ªŠò
         switch (newIndex)
         {
