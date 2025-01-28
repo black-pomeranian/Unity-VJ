@@ -4,7 +4,7 @@ using UniRx;
 
 public class BPMActivator : MonoBehaviour
 {
-    [SerializeField] private OSCServer oscServer; // BPMを取得するOSCServer
+    public OSCServer oscServer; // BPMを取得するOSCServer
     private float frequency;
     private Transform[] childObjects;
     private int currentIndex = 0;
@@ -38,6 +38,14 @@ public class BPMActivator : MonoBehaviour
         {
             StopCoroutine(activationCoroutine);
         }
+
+        // 例外処理を追加（ゲームオブジェクトが非アクティブの場合はスキップ）
+        if (!gameObject.activeInHierarchy)
+        {
+           // Debug.LogWarning($"[{name}] GameObject is inactive, skipping coroutine start.");
+            return;
+        }
+
         activationCoroutine = StartCoroutine(ActivationLoop());
     }
 
@@ -61,6 +69,13 @@ public class BPMActivator : MonoBehaviour
 
             // BPMに基づく時間待機
             yield return new WaitForSeconds(1f / frequency);
+
+            // 追加: 途中でGameObjectが非アクティブになったら停止
+            if (!gameObject.activeInHierarchy)
+            {
+                Debug.LogWarning($"[{name}] GameObject became inactive, stopping coroutine.");
+                yield break;
+            }
         }
     }
 }
