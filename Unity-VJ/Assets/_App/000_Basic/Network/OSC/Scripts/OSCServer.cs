@@ -21,6 +21,7 @@ public class OSCServer : MonoBehaviour
     private readonly ReactiveProperty<float> _bpm = new FloatReactiveProperty();
     public void SetB1(float value)
     {
+        Debug.Log("b1");
         _b1.Value = value;
     }
     public void SetB2(float value)
