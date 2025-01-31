@@ -34,7 +34,7 @@ public class SceneLoadManager : MonoBehaviour
                 sceneLoader.LoadScene(newIndex);
                 break;
             case 2:
-                Debug.Log("Scene Index is 2: Perform Action C");
+                sceneLoader.LoadScene(newIndex);
                 // Action C ‚Ìˆ—
                 break;
             default:

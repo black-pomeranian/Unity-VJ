@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_App/001_TreeRock/Scenes/001_FogForest.unity
     guid: dc74541407d13424e9dd924f81c99fea
   - enabled: 1
+    path: Assets/_App/002_Mountain/Scenes/002_Mountain.unity
+    guid: 42ee821a96620924b9e0838082856b3a
+  - enabled: 1
     path: Assets/_App/000_Basic/Scenes/LoadingScene.unity
     guid: 1f5b242bffea9b447b4602fe57036945
   m_configObjects: {}
