@@ -35,7 +35,15 @@ public class SceneLoadManager : MonoBehaviour
                 break;
             case 2:
                 sceneLoader.LoadScene(newIndex);
-                // Action C ÇÃèàóù
+                break;
+            case 3:
+                sceneLoader.LoadScene(newIndex);
+                break;
+            case 4:
+                sceneLoader.LoadScene(newIndex);
+                break;
+            case 5:
+                sceneLoader.LoadScene(newIndex);
                 break;
             default:
                 Debug.Log($"Scene Index is {newIndex}: Default Action");
