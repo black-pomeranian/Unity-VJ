@@ -6153,17 +6153,17 @@ PrefabInstance:
     - target: {fileID: 6378554213092238519, guid: dfcb899dc432be3479024d08797ed8ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 6378554213092238519, guid: dfcb899dc432be3479024d08797ed8ca,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9878381
+      value: 0.9866035
       objectReference: {fileID: 0}
     - target: {fileID: 6378554213092238519, guid: dfcb899dc432be3479024d08797ed8ca,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.15548621
+      value: 0.16313684
       objectReference: {fileID: 0}
     - target: {fileID: 7023443659509502082, guid: dfcb899dc432be3479024d08797ed8ca,
         type: 3}
@@ -6314,6 +6314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779768343953388340, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
+        type: 3}
+      propertyPath: sceneMax
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4150390069003984993, guid: fe0a5d9ac6c8f7447bcc6ed95a7027c9,
         type: 3}

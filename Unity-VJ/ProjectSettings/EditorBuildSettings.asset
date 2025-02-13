@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/_App/003_TV/Scene/003_TV.unity
     guid: 2e1b9afac68cc1243bdd757954a21aa9
   - enabled: 1
+    path: Assets/_App/004_temple/Scenes/004_temple.unity
+    guid: ccf84aad85d161d49aed890828d72352
+  - enabled: 1
     path: Assets/_App/000_Basic/Scenes/LoadingScene.unity
     guid: 1f5b242bffea9b447b4602fe57036945
   m_configObjects: {}
