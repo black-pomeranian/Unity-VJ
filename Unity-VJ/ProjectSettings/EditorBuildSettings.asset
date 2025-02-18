@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/_App/004_temple/Scenes/004_temple.unity
     guid: ccf84aad85d161d49aed890828d72352
   - enabled: 1
+    path: Assets/_App/005_Room/005_Room.unity
+    guid: 023c496a4647bde4b9b34b61f5a8e7bb
+  - enabled: 1
     path: Assets/_App/000_Basic/Scenes/LoadingScene.unity
     guid: 1f5b242bffea9b447b4602fe57036945
   m_configObjects: {}
