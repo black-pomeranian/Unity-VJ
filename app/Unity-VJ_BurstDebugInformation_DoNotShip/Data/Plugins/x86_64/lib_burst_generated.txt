@@ -11,6 +11,7 @@ Library: C:\Users\ryoro\Work\Unity\Unity-VJ\Unity-VJ\Temp\BurstOutput\Data\Plugi
 --float-mode=Fast
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Unity.Postprocessing.Runtime;
 --assembly-defines=NtpTimestamp;
 --assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=Klak.Ndi.Runtime;
@@ -78,6 +79,7 @@ Library: C:\Users\ryoro\Work\Unity\Unity-VJ\Unity-VJ\Temp\BurstOutput\Data\Plugi
 --float-mode=Fast
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Unity.Postprocessing.Runtime;
 --assembly-defines=NtpTimestamp;
 --assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=Klak.Ndi.Runtime;
@@ -143,6 +145,7 @@ Library: C:\Users\ryoro\Work\Unity\Unity-VJ\Unity-VJ\Temp\BurstOutput\Data\Plugi
 --target-framework=NetFramework
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Unity.Postprocessing.Runtime;
 --assembly-defines=NtpTimestamp;
 --assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=Klak.Ndi.Runtime;
@@ -214,6 +217,7 @@ Library: C:\Users\ryoro\Work\Unity\Unity-VJ\Unity-VJ\Temp\BurstOutput\Data\Plugi
 --target-framework=NetFramework
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Unity.Postprocessing.Runtime;
 --assembly-defines=NtpTimestamp;
 --assembly-defines=Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary;
 --assembly-defines=Klak.Ndi.Runtime;
