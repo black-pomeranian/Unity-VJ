@@ -5,7 +5,7 @@ public class GameSettings : MonoBehaviour
     void Start()
     {
         // FPS‚ğ60‚Éİ’è
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 30;
     }
 
     void Update()
